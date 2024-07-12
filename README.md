@@ -18,3 +18,11 @@ const [state, setState] = useState(0)
 
 - Props or Stata value -> Run First render and Render with every state or props changes
   useEffect(()=>{}, [])
+
+## Context API Hook Syntax
+
+### const NAME = createContext(InitialValue)
+
+export const CONTEXT_NAME = createContext({})
+
+- This have 2 part (Provider = which is pass value), (Consumer -> useContext Hook = which is get value)
