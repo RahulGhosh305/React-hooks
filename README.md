@@ -34,3 +34,9 @@ export const CONTEXT_NAME = createContext({})
 const [state, dispatch] = useReducer(reducer, initialValue)
 
 - Reducer_Function function take 2 parameter: (state, action)
+
+## useRef Hook Syntax
+
+### const REF_NAME = useRef(Initial_Value)
+
+- Initial_Value is Optional
