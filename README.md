@@ -6,7 +6,7 @@
 
 const [state, setState] = useState(0)
 
-## useState Hook Syntax
+## useEffect Hook Syntax
 
 ### useEffect(Callback_Function, Dependency_Array)
 
@@ -40,3 +40,11 @@ const [state, dispatch] = useReducer(reducer, initialValue)
 ### const REF_NAME = useRef(Initial_Value)
 
 - Initial_Value is Optional
+
+## useLayoutEffect Hook Syntax
+
+### useEffect(Callback_Function, Dependency_Array)
+
+- useLayoutEffect -> run synchronously after the render but before the screen update. This means that the browser paint the UI after the effect runs.
+
+- useEffect -> run asynchronously after the render is committed to the screen. This means that the browser has already painted the UI before the effect runs.
