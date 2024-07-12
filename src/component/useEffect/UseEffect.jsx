@@ -1,10 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MinusIcon from "../../atoms/MinusIcon";
 import PlusIcon from "../../atoms/PlusIcon";
 
-const UseState = () => {
+const UseEffect = () => {
   // useState Hook
   const [count, setCount] = useState(0);
+
+  // useEffect Hook -> No Dependency Passed = Run on every render
+  useEffect(() => {
+    document.title = count;
+  });
+
+  // useEffect Hook -> An empty array = Run only first render
+  //   useEffect(() => {
+  //     document.title = count;
+  //   }, []);
+
+  // useEffect Hook -> Pass props or state value = Run only first render or if props, state value will changes
+  //   useEffect(() => {
+  //     document.title = count;
+  //   }, [count]);
+
   return (
     <>
       <div className="d-flex justify-content-center align-items-center my-5">
@@ -16,7 +32,7 @@ const UseState = () => {
           }}
         >
           <div className="text-center">
-            <p>useState Hook</p>
+            <p>useEffect Hook</p>
             <h3>{count}</h3>
             <div className="mt-4">
               <button
@@ -44,4 +60,4 @@ const UseState = () => {
   );
 };
 
-export default UseState;
+export default UseEffect;
