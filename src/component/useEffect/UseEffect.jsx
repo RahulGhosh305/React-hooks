@@ -23,7 +23,7 @@ const UseEffect = () => {
 
   return (
     <>
-      <div className="d-flex justify-content-center align-items-center my-5">
+      <div className="d-flex justify-content-center align-items-center my-4">
         <div
           className="border p-3 rounded-3"
           style={{

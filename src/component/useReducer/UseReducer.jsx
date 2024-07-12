@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useReducer } from "react";
 import MinusIcon from "../../atoms/MinusIcon";
 import PlusIcon from "../../atoms/PlusIcon";
+import { initial_value, reducer } from "./reducer";
 
-const UseState = () => {
-  // useState Hook
-  const [count, setCount] = useState(0);
+const UseReducer = () => {
+  // useReducer Hook
+  const [state, dispatch] = useReducer(reducer, initial_value);
   return (
     <>
       <div className="d-flex justify-content-center align-items-center my-4">
@@ -16,23 +17,19 @@ const UseState = () => {
           }}
         >
           <div className="text-center">
-            <p>useState Hook</p>
-            <h3>{count}</h3>
+            <p>useReducer Hook</p>
+            <h3>{state}</h3>
             <div className="mt-4">
               <button
                 className="btn btn-primary"
                 style={{ marginRight: "100px" }}
-                onClick={() =>
-                  count === 0
-                    ? setCount(0)
-                    : setCount((previousValue) => previousValue - 1)
-                }
+                onClick={() => dispatch({ type: "DEC", payload: 5 })}
               >
                 <MinusIcon />
               </button>
               <button
                 className="btn btn-success"
-                onClick={() => setCount((previousValue) => previousValue + 1)}
+                onClick={() => dispatch({ type: "INC", payload: 5 })}
               >
                 <PlusIcon />
               </button>
@@ -44,4 +41,4 @@ const UseState = () => {
   );
 };
 
-export default UseState;
+export default UseReducer;

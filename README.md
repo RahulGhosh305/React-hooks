@@ -26,3 +26,11 @@ const [state, setState] = useState(0)
 export const CONTEXT_NAME = createContext({})
 
 - This have 2 part (Provider = which is pass value), (Consumer -> useContext Hook = which is get value)
+
+## useReducer Hook Syntax
+
+### const [State_Variable, Action_Dispatch] = useReducer(Reducer_Function, Initial_Value)
+
+const [state, dispatch] = useReducer(reducer, initialValue)
+
+- Reducer_Function function take 2 parameter: (state, action)

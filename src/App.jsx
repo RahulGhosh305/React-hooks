@@ -1,6 +1,7 @@
 import { ContextApi } from "./component/contextAPI/ContextApi";
 import CounterApp from "./component/contextAPI/CounterApp";
 import UseEffect from "./component/useEffect/UseEffect";
+import UseReducer from "./component/useReducer/UseReducer";
 import UseState from "./component/useState/UseState";
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
             <ContextApi>
               <CounterApp />
             </ContextApi>
+          </div>
+          <div className="col-12 col-md-6 col-lg-4">
+            <UseReducer />
           </div>
         </div>
       </div>
