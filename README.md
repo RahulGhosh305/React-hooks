@@ -8,7 +8,7 @@ const [state, setState] = useState(0)
 
 ## useEffect Hook Syntax
 
-### useEffect(Callback_Function, Dependency_Array)
+### useEffect(Callback_Function, [Dependency_Array])
 
 - No dependency passes -> Run on every render
   useEffect(()=> {})
@@ -43,8 +43,15 @@ const [state, dispatch] = useReducer(reducer, initialValue)
 
 ## useLayoutEffect Hook Syntax
 
-### useEffect(Callback_Function, Dependency_Array)
+### useEffect(Callback_Function, [Dependency_Array])
 
 - useLayoutEffect -> run synchronously after the render but before the screen update. This means that the browser paint the UI after the effect runs.
 
 - useEffect -> run asynchronously after the render is committed to the screen. This means that the browser has already painted the UI before the effect runs.
+
+## useMemo Hook Syntax
+
+### const Variable_Name = useMemo(Callback_Function, [Dependency_Array])
+
+- Similler to useEffect Hook but defference is it return the Value. Where as useEffect don't return value.
+- It's all about Memoization / Caching.

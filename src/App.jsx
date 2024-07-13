@@ -2,6 +2,7 @@ import { ContextApi } from "./component/contextAPI/ContextApi";
 import CounterApp from "./component/contextAPI/CounterApp";
 import UseEffect from "./component/useEffect/UseEffect";
 import UseLayoutEffect from "./component/useLayoutEffect/UseLayoutEffect";
+import UseMemo from "./component/useMemo/UseMemo";
 import UseReducer from "./component/useReducer/UseReducer";
 import UseRef from "./component/useRef/UseRef";
 import UseState from "./component/useState/UseState";
@@ -31,6 +32,9 @@ function App() {
           </div>
           <div className="col-12 col-md-6 col-lg-4">
             <UseLayoutEffect />
+          </div>
+          <div className="col-12 col-md-6 col-lg-4">
+            <UseMemo />
           </div>
         </div>
       </div>
