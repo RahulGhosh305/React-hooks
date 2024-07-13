@@ -17,7 +17,7 @@ const [state, setState] = useState(0)
   useEffect(()=> {},[])
 
 - Props or Stata value -> Run First render and Render with every state or props changes
-  useEffect(()=>{}, [])
+  useEffect(()=>{}, [dependency])
 
 ## Context API Hook Syntax
 
