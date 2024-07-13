@@ -15,12 +15,14 @@ const UseCallBackHook = () => {
   }, [todos]);
 
   return (
-    <div className="d-flex justify-content-center align-items-center mb-5">
+    <div className="d-flex justify-content-center align-items-center my-4">
       <div
         className="border p-3 rounded-3 text-center"
         style={{ backgroundColor: "#fff" }}
       >
-        <Todos todos={todos} addTodo={addTodo} />
+        <div className="my-3">
+          <Todos todos={todos} addTodo={addTodo} />
+        </div>
 
         <div>
           <p>Count: {count}</p>
