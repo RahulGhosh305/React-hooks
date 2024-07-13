@@ -6,13 +6,13 @@ const UseCallBackHook = () => {
   const [todos, setTodos] = useState([]);
 
   const increment = () => {
-    setCount((prevState) => prevState + 1);
+    setCount(count + 1);
   };
 
   // useCallback Hook to memoize addTodo function without dependency on todos
   const addTodo = useCallback(() => {
-    setTodos((prevState) => [...prevState, "New Entry"]);
-  }, []);
+    return setTodos((prevState) => [...prevState, "New Entry"]);
+  }, [todos]);
 
   return (
     <div className="d-flex justify-content-center align-items-center mb-5">

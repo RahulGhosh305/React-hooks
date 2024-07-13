@@ -4,7 +4,7 @@ const Todos = ({ todos, addTodo }) => {
   console.log("child/todo render");
   return (
     <div>
-      <h2>My Todos</h2>
+      <h4>My Todos</h4>
       {todos.map((todo, index) => {
         return <p key={index}>{todo + " " + index}</p>;
       })}
