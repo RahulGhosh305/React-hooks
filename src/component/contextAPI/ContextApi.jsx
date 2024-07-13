@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const COUNTER_CONTEXT = createContext({}); // Context API Hook
@@ -13,4 +13,11 @@ export const ContextApi = ({ children }) => {
       {children}
     </COUNTER_CONTEXT.Provider>
   );
+};
+
+// Custom Hooks
+// eslint-disable-next-line react-refresh/only-export-components
+export const useGlobalContext = () => {
+  // eslint-disable-next-line no-undef
+  return useContext(COUNTER_CONTEXT); // useContext Hook
 };

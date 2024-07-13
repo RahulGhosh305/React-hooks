@@ -1,11 +1,10 @@
-import { useContext } from "react";
 import MinusIcon from "../../atoms/MinusIcon";
 import PlusIcon from "../../atoms/PlusIcon";
-import { COUNTER_CONTEXT } from "./ContextApi";
+import { useGlobalContext } from "./ContextApi";
 
 const CounterApp = () => {
-  // useContext Hook
-  const { count, setCount } = useContext(COUNTER_CONTEXT);
+  // Custom Hook
+  const { count, setCount } = useGlobalContext();
 
   return (
     <>
