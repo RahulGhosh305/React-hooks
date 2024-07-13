@@ -1,5 +1,6 @@
 import { ContextApi } from "./component/contextAPI/ContextApi";
 import CounterApp from "./component/contextAPI/CounterApp";
+import UseCallback from "./component/useCallback/UseCallback";
 import UseEffect from "./component/useEffect/UseEffect";
 import UseLayoutEffect from "./component/useLayoutEffect/UseLayoutEffect";
 import UseMemo from "./component/useMemo/UseMemo";
@@ -35,6 +36,9 @@ function App() {
           </div>
           <div className="col-12 col-md-6 col-lg-4">
             <UseMemo />
+          </div>
+          <div className="col-12 col-md-6 col-lg-4">
+            <UseCallback />
           </div>
         </div>
       </div>
