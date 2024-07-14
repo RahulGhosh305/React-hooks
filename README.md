@@ -62,3 +62,7 @@ const [state, dispatch] = useReducer(reducer, initialValue)
 
 - Similler to useEffect Hook but defference is it memoization function reference.
 - It's all about Memoization / Caching function.
+
+## Custom Hook Syntax
+
+- for CustomHook Create startwith use key word
