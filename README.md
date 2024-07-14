@@ -40,6 +40,7 @@ const [state, dispatch] = useReducer(reducer, initialValue)
 ### const REF_NAME = useRef(Initial_Value)
 
 - Initial_Value is Optional
+- useRef are used in simillar component
 
 ## useLayoutEffect Hook Syntax
 
@@ -66,3 +67,7 @@ const [state, dispatch] = useReducer(reducer, initialValue)
 ## Custom Hook Syntax
 
 - for CustomHook Create startwith use key word
+
+## forwardRef Syntax
+
+- forward are used between two component for passing ref
